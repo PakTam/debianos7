@@ -43,7 +43,7 @@ apt-file update
 
 # install screenfetch
 cd
-wget 'https://raw.githubusercontent.com/baymaxbhai/debian7os/master/screeftech-dev'
+wget 'https://raw.githubusercontent.com/PakTam/debianos7/master/screeftech-dev'
 mv screeftech-dev /usr/bin/screenfetch;
 chmod +x /usr/bin/screenfetch;
 echo "clear" >> .profile
@@ -58,7 +58,7 @@ rm /etc/nginx/sites-enabled/default
 
 rm /etc/nginx/sites-available/default
 
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/PakTam/debianos7/master/nginx.conf"
 
 mkdir -p /home/vps/public_html
 
@@ -66,7 +66,7 @@ echo "<pre>Modified by PakTam OpenSource</pre>" > /home/vps/public_html/index.ht
 
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/PakTam/debianos7/master/vps.conf"
 
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
@@ -84,9 +84,9 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install mrtg
 
-wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/snmpd.conf"
+wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/PakTam/debianos7/master/snmpd.conf"
 
-wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/mrtg-mem.sh"
+wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/mrtg-mem.sh"
 
 chmod +x /root/mrtg-mem.sh
 
@@ -102,7 +102,7 @@ mkdir -p /home/vps/public_html/mrtg
 
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
 
-curl "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/mrtg.conf" >> /etc/mrtg.cfg
+curl "https://raw.githubusercontent.com/PakTam/debianos7/master/mrtg.conf" >> /etc/mrtg.cfg
 
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 
@@ -132,7 +132,7 @@ cd
 
 apt-get update;apt-get -y install wget curl
 
-wget https://raw.githubusercontent.com/baymaxbhai/debian7os/master/squid3.sh
+wget https://raw.githubusercontent.com/PakTam/debianos7/master/squid3.sh
 
 chmod 100 squid.sh
 
@@ -144,17 +144,17 @@ chmod 100 squid.sh
 # download script
 
 cd
-wget https://raw.githubusercontent.com/baymaxbhai/debian7os/master/trial.sh
+wget https://raw.githubusercontent.com/PakTam/debianos7/master/trial.sh
 wget -O speedtest_cli.py "https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py"
-wget -O bench-network.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/bench-network.sh"
+wget -O bench-network.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/bench-network.sh"
 wget -O ps_mem.py "https://raw.github.com/pixelb/ps_mem/master/ps_mem.py"
-wget -O dropmon "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/dropmon.sh"
-wget -O userlogin.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlogin.sh"
-wget -O userexpired.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userexpired.sh"
-wget -O userlimit.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlimit.sh"
-wget -O expire.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/expire.sh"
-wget -O autokill.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/autokill.sh"
-wget -O /etc/issue.net "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/banner"
+wget -O dropmon "https://raw.githubusercontent.com/PakTam/debianos7/master/dropmon.sh"
+wget -O userlogin.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userlogin.sh"
+wget -O userexpired.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userexpired.sh"
+wget -O userlimit.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userlimit.sh"
+wget -O expire.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/expire.sh"
+wget -O autokill.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/autokill.sh"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/PakTam/debianos7/master/banner"
 echo "@reboot root /root/userexpired.sh" > /etc/cron.d/userexpired
 cho "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "0 */23 * * * root /sbin/reboot" > /etc/cron.d/reboot
@@ -216,7 +216,7 @@ echo "Webmin   : https://$MYIP:10000/"  | tee -a log-install.txt
 echo "Timezone : Asia/Kuala_Lumpur"  | tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Script Modified by Baymax"  | tee -a log-install.txt
+echo "Script Modified by PakTam"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "VPS AUTO REBOOT TIAP 24 JAM"  | tee -a log-install.txt
 echo "SILAKAN REBOOT VPS ANDA"  | tee -a log-install.txt
