@@ -1,5 +1,5 @@
 #openvpn
-#edited by baymaxbhai
+#edited by PakTam
 
 echo "OVPN Login"
 echo "---";
@@ -16,4 +16,4 @@ do
 done
 echo "---";
 
-echo -e "\e[1;33;44mBAYMAX_BHAI_SSH\e[0m"
+echo -e "\e[1;33;44mPakTam_BHAI_SSH\e[0m"

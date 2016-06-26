@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright by Baymax_Bhai_ssh
+# Copyright by PakTam_Bhai_ssh
 # ================================
 # 
 
@@ -42,4 +42,4 @@ echo "-------------------"
 last | grep ppp | grep still
 
 echo "-----------------------------------------------"
-echo "BAYMAX_BHAI_SSH";
+echo "PakTam_BHAI_SSH";
