@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright by Baymax_Bhai_ssh
+# Copyright by PakTam_ssh
 # ================================
 # 
 
