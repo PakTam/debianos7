@@ -15,4 +15,4 @@ JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)
 echo "-------------------------------"
 echo "Jumlah akaun: $JUMLAH user"
 echo "-------------------------------"
-echo -e "\e[1;33;44m[PakTam_BHAI_SSH]\e[0m"
+echo -e "\e[1;33;44m[BAYMAX_BHAI_SSH]\e[0m"

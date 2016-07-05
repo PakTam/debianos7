@@ -42,7 +42,7 @@ do
     fi
 done
 echo "---------------------------------------------------------------" 
-echo -e "\e[1;33;44mPakTamSSH\e[0m"
+echo -e "\e[1;33;44mBAYMAXBHAISSH\e[0m"
 else
 echo "  Gunakan perintah ./dropmon.sh [port]"
 echo "  contoh : ./dropmon.sh 443"
@@ -50,4 +50,3 @@ echo \n
 echo \n
 fi
 exit 0
-
