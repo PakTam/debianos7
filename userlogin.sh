@@ -42,4 +42,4 @@ echo "-------------------"
 last | grep ppp | grep still
 
 echo "-----------------------------------------------"
-echo "BAYMAX_BHAI_SSH";
+echo "PakTam_SSH";
